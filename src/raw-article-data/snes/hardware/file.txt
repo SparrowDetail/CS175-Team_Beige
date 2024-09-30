@@ -1,0 +1,31 @@
+Author: Steve
+Date: 9/30/2024
+Title: Super Nintendo Hardware Overview
+Sources:
+    https://www.copetti.org/writings/consoles/super-nintendo/
+    https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System
+    https://nintendo.fandom.com/wiki/Super_Nintendo_Entertainment_System
+
+<article>
+    <h1>What makes a Super Nintendo?</h1>
+    <section>
+        <h2>Background</h2>
+        <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg" 
+            alt="Super Nintendo" 
+            aria-label="Super Nintendo Entertainment System/Super Famicom">
+        <p>
+            The Super Nintendo Entertainment System arrived on the scene in 1990 with it's release to the Japanese and South Korean markets.
+            The world was greeted with a lovely 16-bit improvement on the 8-bit Nintendo Entertainment System...
+        </p>
+    </section>
+    <section>
+        <h2>The CPU</h2>
+    </section>
+    <section>
+        <h2>Behind the Picture</h2>
+    </section>
+    <section>
+        <h2>Wait. What's that sound!</h2>
+    </section>
+</article>
