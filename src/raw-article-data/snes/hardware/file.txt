@@ -7,26 +7,127 @@ Sources:
     https://nintendo.fandom.com/wiki/Super_Nintendo_Entertainment_System
     https://en.wikipedia.org/wiki/Motorola_68000
     https://en.wikipedia.org/wiki/MOS_Technology_6502
+    https://en.wikipedia.org/wiki/Fourth_generation_of_video_game_consoles
+    https://videogameperfection.com/forums/topic/43-87-aspect-ratio-correction-for-snes/
+    https://wiki.superfamicom.org/dma-and-hdma
 
 <article>
     <h1>What makes a Super Nintendo?</h1>
     <section>
         <h2>Background</h2>
-        <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg" 
-            alt="Super Nintendo" 
-            aria-label="Super Nintendo Entertainment System/Super Famicom">
+        <figure>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg" 
+                alt="Super Nintendo" 
+                aria-label="Super Nintendo Entertainment System/Super Famicom"
+                loading="lazy">
+            <figcaption>Super Nintendo (top) and Super Famicom (bottom)</figcaption>
+        </figure>
         <p>
-            The Super Nintendo Entertainment System arrived on the scene in 1990 with it's release to the Japanese and South Korean markets.
-            The world was greeted with a lovely 16-bit improvement on the 8-bit Nintendo Entertainment System. Despite  entering into the 
-            16-bit ga, the Super Nintendo quickly to be recognized as a 
+            The Super Nintendo Entertainment System (SNES) arrived on the scene in 1990 with its initial release to the Japanese and South Korean markets under the name Super Famicom.
+            The world was greeted with a lovely 16-bit improvement on the 8-bit Nintendo Entertainment System (NES). Despite  entering into the 
+            16-bit era (1987-2004) a little late, the Super Nintendo quickly came to be recognized as the largest selling 16-bit game console
+            with over 49 million consoles sold!
         </p>
     </section>
     <section>
         <h2>The CPU</h2>
+        <figure>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/XC68000.agr.jpg/250px-XC68000.agr.jpg"
+                alt="Motorola 68000"
+                aria-label="Motorola 68000 image"
+                loading="lazy">
+            <img
+                src="https://www.copetti.org/images/consoles/snes/photos/s-cpu.282d88e4761530efe8344c49af67d947eb9d1ebea15f09cb210a0af5e0d47511.webp"
+                alt="Ricoh 5A22"
+                aria-label="Ricoh 5A22 used in Super Nintendo"
+                loading="lazy">
+            <figcaption>
+                Motorola 68000 (top) and Super Nintendo Ricoh 5A22 (bottom)
+            </figcaption>
+        </figure>
+        <p>
+            Let's start with the competition! Most 16-bit game consoles, such as Sega's Genesis and various arcade cabinets, adopted a fully fledged 16-bit
+            processor in the Motorola 68000. This was a complex instruction set computer microprocessor released by Motorola in 1979. This processor was coined
+            as a 16/32-bit processor, capable of both instruction sets, with 32-bit registers and a 16-bit internal data bus. The address bus was 24-bits and did
+            not use segmented memory. All and all, this was a relatively powerful processor witch quickly became the first widely adopted processor capable of 32-bit
+            instruction sets.
+        </p>
+        <p>
+            This was not quite Nintendo's approach to the 16-bit era. Nintendo has a long standing history of innovating well known technology to create powerful, 
+            lightweight solutions. The Super Nintendo is no exception to this rule. The NES utilized a modified MOS 6502 8-bit processor designed by Ricoh called
+            the Ricoh 2A03. Down the line, Ricoh acquired a license to the WDC 65C816 design, witch was a 16-bit processor backwards compatible with the MOS 6502
+            requested by Apple. Enjoying good relations with Nintendo, Ricoh designed the Ricoh 5A22 based on the WDC 65C816 and tailored it specifically to Nintendo's
+            needs for the SNES. However, unlike the WDC 65C816 the Ricoh 5A22 was not backwards compatible with the Ricoh 2A03, but there is some evidence that
+            Nintendo had originally intended this to be the case.
+        </p>
+        <table>
+            <caption>Ricoh 5A22 Overview</caption>
+            <tbody>
+                <tr>
+                    <td>Variable Clock Speed</td>
+                    <td>1.79MHz-3.58MHz</td>
+                </tr>
+                <tr>
+                    <td>Instruction Set</td>
+                    <td>65816 ISA</td>
+                </tr>
+                <tr>
+                    <td>Data Bus</td>
+                    <td>8-bit</td>
+                </tr>
+                <tr>
+                    <td>Address Bus</td>
+                    <td>24-bit</td>
+                </tr>
+                <tr>
+                    <td>General Purpose Registers</td>
+                    <td>three 16-bit</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <section>
         <h2>Behind the Picture</h2>
+        <figure>
+            <img 
+                src="https://www.copetti.org/images/consoles/snes/photos/s-ppus.1a078ec0f83d4662b06c5cb66fdd4cee41e86110a227085e7ab175f5583338b7.webp" 
+                alt="Super Nintendo S-PPU" 
+                aria-label="Super Nintendo Entertainment System Picture Processing Units"
+                loading="lazy">
+            <figcaption>Super Nintendo Picture Processing Units (PPU) combined to make S-PPU</figcaption>
+        </figure>
+        <p>
+            The NES originally produced images using a Picture Processing Unit (PPU) that beamed graphics in pace with CRT screens using 8 by 8 pixel 2D tiles.
+            The SNES improved on this by utilizing two tandem PPU chipsets to provide different functionalities, but combined together to make one "Super PPU"
+            or S-PPU. S-PPU1 was responsible for rendering graphic tiles and applying transformations to them (rotation and movement) and S-PPU2 rendered effects
+            like window mosaics and fades over rendered graphics. programmatically, both S-PPUs acted as one unit.
+        </p>
+        <figure>
+            <img
+                src="https://farm3.staticflickr.com/2934/14001346425_41b6ae33aa_o.png"
+                alt="Aspect ratio compared"
+                aria-label="Super Nintendo Aspect Ratio Comparison
+                loading="lazy">
+        <p>
+            The SNES outputs its visuals at a standard resolution of 256 by 224 px, or 256 by 240 pixels in Europe under PAL regulations. This meant the Super Nintendo
+            rendered images at an 8:7 aspect ratio (i.e. one would pixel appeared to have an 8:7 aspect ratio instead of being perfectly square). With most televisions 
+            at the time hosting a 4:3 aspect ratio, this meant games most games appeared horizontally stretched on a standard television with very few games accounting
+            for this issue.
+        </p>
+        <p>
+            The Super Nintendo possessed 64 KB of Video RAM (VRAM) used to store tile assets for rendering by the S-PPU. The S-PPU possessed 512 B of Colour Graphics
+            RAM (CGRAM) used to store color pallette entries (16-bits each) and 544 B of Object Attribute Memory (OAM) which stores up to 128 tiles and their attributes (vertical/
+            horizontal flip, priority of 1 or 2, CGRAM pallette reference, and tile reference). Additionally, the S-PPU possesses a Direct Memory Access (DMA) unit and an HDMA unit
+            that allowed graphics to render without waiting on a CRT's <a href="https://en.wikipedia.org/wiki/Raster_scan" aria-label="Breakdown of the V-scan or Raster Scan" target="_blank">V-Scan</a> 
+            period to complete before rendering new graphics. This allowed developers to change S-PPU settings mid-frame for very unique game design opportunities. Anyway, backing up a bit,
+            the DMA is a chip that allows the CPU (or peripherals) to read data directly from memory without requiring the CPU to execute a series of read/write operations. This made rendering
+            graphics faster, but, due to a shared address bus in the SNES, CPU processes were paused when DMA was in use. HDMA was similar in function, but, rather than transferring an entire memory
+            block at once, only a few bytes would be transferred during the <a href="https://en.wikipedia.org/wiki/Horizontal_blanking_interval" aria-label="H-Blank Breakdown">H-Blank</a> period.
+            This permitted the S-PPU to modify render data during a frame without distorting the image. HDMA would always take priority over DMA transfers and any conflicting DMA data would be
+            terminated immediately.
+        </p>
     </section>
     <section>
         <h2>Wait. What's that sound!</h2>
