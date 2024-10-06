@@ -1,0 +1,180 @@
+/**
+Author: Steven Short
+Date: 10/6/2024
+Description: General use article styles and classes
+**/
+:root {
+    --header-text-margin: 1em;
+    --figure-border-color: black;
+    --img-figure-max-width: 300px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main, footer {
+    width: 95%;
+    height: fit-content;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/*Article typographical and structural styles*/
+article {
+    display: block;
+    width: 100%;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        text-align: center;
+        margin: 0 0 var(--header-text-margin) 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.1em;
+    }
+
+    p {
+        vertical-align: baseline;
+        line-height: 1.5em;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(88, 202, 7); /*pending color scheme*/
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+
+    a:visited {
+        color: rgb(57, 131, 4); /*pending color scheme*/
+    }
+}
+
+/*Article Section typographical and structural styles*/
+article section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    p {
+        padding: 0 0 1em 0;
+    }
+
+    p:last-of-type {
+        padding: 0;
+    }
+}
+
+/*Figure styles*/
+figure {
+    width: fit-content;
+    max-width: var(--img-figure-max-width);
+    height: fit-content;
+    padding: 1rem;
+    border: 5px double var(--figure-border-color);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
+
+    figcaption {
+        font-style: italic;
+        text-align: center;
+    }
+
+    img {
+        border: none;
+    }
+}
+
+img {
+    width: 100%;
+    max-width: var(--img-figure-max-width);
+    border: 1px solid black;
+}
+
+/*Style Classes*/
+.fig-top-bottom {
+    gap: 0;
+
+    img:last-of-type {
+        margin-bottom: 1rem;
+    }
+}
+
+.fig-left-right {
+    max-width: fit-content;
+    gap: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    img {
+        grid-row: 1;
+        grid-column: span 1;
+        max-width: var(--img-figure-max-width);
+    }
+    
+    figcaption {
+        grid-row: 2;
+        grid-column: 1/-1;
+    }
+}
+
+/*Desktop Styles*/
+@media only screen and (min-width: 600px) {
+    /*Article Section typographical and structural styles*/
+    article section {
+        display: block;
+    }
+
+    /*Default figure and img styles*/
+    figure, section > img {
+        margin: 1em auto;
+    }
+
+    section > img {
+        display: flex;
+    }
+
+    /*Style classes*/
+
+    /*Defaults centered on mobile*/
+    .float-right {
+        float: right;
+        margin: 0 1rem 1rem;
+    }
+}
+
+/*Animations - requires article.js*/
+@media (prefers-reduced-motion: no-preference) {
+    *[fade-in] {
+        opacity: 0;
+    }
+
+    .fade-in-animation {
+        animation: 700ms fade-in linear forwards 1;
+    }
+
+    @keyframes fade-in {
+        from {
+            transform: translateY(15%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
