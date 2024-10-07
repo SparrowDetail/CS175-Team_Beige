@@ -59,6 +59,10 @@ article {
     a:visited {
         color: rgb(57, 131, 4); /*pending color scheme*/
     }
+
+    hr {
+        margin: 1em 0;
+    }
 }
 
 /*Article Section typographical and structural styles*/
@@ -68,11 +72,11 @@ article section {
     place-items: center;
 
     p {
-        padding: 0 0 1em 0;
+        margin: 0 0 1em 0;
     }
 
     p:last-of-type {
-        padding: 0;
+        margin: 0;
     }
 }
 
@@ -96,6 +100,20 @@ figure {
     img {
         border: none;
     }
+}
+
+.fig-model-2 {
+    --box-shadow: #47474778; /*Pending color palette*/
+    //border: 1px solid black;
+    border: none;
+    background: linear-gradient(
+        135deg,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255) 80%,
+        rgba(83, 83, 83, 0.13) 90%
+    );
+    box-shadow: 10px 5px 10px 0px var(--box-shadow), 
+        -2px -2px 10px 0px var(--box-shadow);
 }
 
 img {
@@ -124,11 +142,24 @@ img {
         grid-row: 1;
         grid-column: span 1;
         max-width: var(--img-figure-max-width);
+        min-width: 150px;
     }
     
     figcaption {
         grid-row: 2;
         grid-column: 1/-1;
+    }
+}
+
+/*Footer styles and classes*/
+.sources {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 1.2em;
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        margin: 0 0 0 -30px;
     }
 }
 
