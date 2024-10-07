@@ -37,8 +37,28 @@ article :is(h1, h2, h3, h4, h5, h6) {
   margin: 0 0 var(--header-text-margin) 0;
   padding: 0;
 }
-article h1 {
+article header {
+  margin: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+article header #author, article header #date {
+  margin: 0 0 0 1rem;
+  padding: 0;
+  font-style: italic;
+  line-height: 1.4em;
+}
+article header #author::before {
+  content: "By: ";
+}
+article header #date::before {
+  content: "Last edited ";
+}
+article header h1 {
   font-size: 2.1em;
+  margin: 0 0 1rem 0;
 }
 article p {
   vertical-align: baseline;

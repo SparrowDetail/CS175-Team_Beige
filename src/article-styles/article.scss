@@ -38,8 +38,32 @@ article {
         padding: 0;
     }
 
-    h1 {
-        font-size: 2.1em;
+    header {
+        margin: 1em 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        #author, #date {
+            margin: 0 0 0 1rem;
+            padding: 0;
+            font-style: italic;
+            line-height: 1.4em;
+        }
+
+        #author::before {
+            content: "By: ";
+        }
+
+        #date::before {
+            content: "Last edited ";
+        }
+
+        h1 {
+            font-size: 2.1em;
+            margin: 0 0 1rem 0;
+        }
     }
 
     p {
