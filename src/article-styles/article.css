@@ -200,5 +200,11 @@ img {
     }
   }
 }
+/*Print view styles - i.e. format for printing*/
+@media print {
+  *[fade-in] {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=article.css.map */
