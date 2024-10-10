@@ -1,0 +1,29 @@
+Author: Steve
+Date: 10/32/2024
+Title: Top 10 Super Nintendo Games By Sales
+Sources:
+    https://nintendo.fandom.com/wiki/List_of_best-selling_Super_Nintendo_Entertainment_System_games
+    https://www.mariowiki.com/Official_Nintendo_Seal
+
+
+<article>
+    <h1>Top 10 Super Nintendo Games by Sales!</h1>
+    <figure>
+        <img
+            src="https://mario.wiki.gallery/images/thumb/5/57/Official_Nintendo_Seal_Black.png/120px-Official_Nintendo_Seal_Black.png"
+            alt="Nintendo Seal of Quality"
+            aria-label="Nintendo Seal of quality used for Super Nintendo">
+        <figcaption>
+            Nintendo seal of quality used 1988 to 2003 (Super Nintendo)
+        </figcaption>
+    </figure>
+    <p>
+        The Super Nintendo was graced with phenomenal console sales, with over 49.1 million units sold worldwide. This could be impart attributed to
+        Nintendo's dedication to its game quality control. Nintendo introduced its seal of quality in 1985 to the American and European markets to
+        help distinguish officially licensed games from pirated knock-offs flooding the market. Now, with great console sales comes great game sales.
+        Without further adieu, lets get into the top 10 Super Nintendo Games by sales!
+    </p>
+    <section>
+
+    </section>
+</article>
