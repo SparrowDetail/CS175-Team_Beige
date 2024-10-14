@@ -9,15 +9,27 @@
         <script src="../js/article.js"></script>
     </head>
     <body>
-        <header></header>
+        <header>
+
+        </header>
         <main>
             <article>
                 <header>
                     <h1>Demonstration of Article Styles</h1>
                     <span id="author">Steven Short</span>
                     <span id="date">10/7/2024</span>
+                    <nav>
+                        <caption>Table of contents:</caption>
+                        <ol>
+                            <li><a href="#in-text-links">In Text Links</a></li>
+                            <li><a href="#image-demo">Images</a></li>
+                            <li><a href="#figure-demo">Figures</a></li>
+                            <li><a href="#fade-in-animations">Fade-in Animation</a></li>
+                            <li><a href="#table-demo">Table</a></li>
+                        </ol>
+                    </nav>
                 </header>
-                <section>
+                <section id="in-text-links">
                     <h2>In text links</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus tellus eget euismod cursus. 
@@ -33,7 +45,7 @@
                     </p>
                 </section>
                 <hr>
-                <section>
+                <section id="image-demo">
                     <h2>Image Default</h2>
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
@@ -65,7 +77,7 @@
                     </p>
                 </section>
                 <hr>
-                <section>
+                <section id="figure-demo">
                     <h2>Figure Default</h2>
                     <figure>
                         <img
@@ -170,7 +182,7 @@
                     </p>
                 </section>
                 <hr>
-                <section>
+                <section id="fade-in-animations">
                     <h2>Image Fade-in Demo (Requires JavaScript)</h2>
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
@@ -204,6 +216,50 @@
                         tortor. Curabitur ultrices vehicula ipsum sit amet porta. Fusce porttitor vehicula molestie. Suspendisse eget 
                         purus quis eros malesuada rhoncus nec eu diam. Sed tincidunt iaculis mi, a accumsan augue iaculis at. Nullam est 
                         libero, auctor a iaculis vel, iaculis nec metus.
+                    </p>
+                </section>
+                <hr>
+                <section id="table-demo">
+                    <h2>Table demo</h2>
+                    <table>
+                        <caption>Ricoh 5A22 Overview</caption>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Variable Clock Speed</td>
+                                <td>1.79MHz-3.58MHz</td>
+                            </tr>
+                            <tr>
+                                <td>Instruction Set</td>
+                                <td>65816 ISA</td>
+                            </tr>
+                            <tr>
+                                <td>Data Bus</td>
+                                <td>8-bit</td>
+                            </tr>
+                            <tr>
+                                <td>Address Bus</td>
+                                <td>24-bit</td>
+                            </tr>
+                            <tr>
+                                <td>General Purpose Registers</td>
+                                <td>three 16-bit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Phasellus pretium turpis volutpat massa aliquet, nec commodo nunc maximus. Phasellus nibh massa, vestibulum vitae 
+                        est sed, varius euismod nibh. Praesent viverra nisi mi, vitae rutrum ante dapibus ultrices. Duis pulvinar mi vel 
+                        consectetur pretium. Duis dapibus ultrices risus, ac tristique dolor. Integer justo ante, imperdiet non est ac, 
+                        ultricies pretium nisi. Nam tellus augue, sagittis eu purus sed, hendrerit condimentum elit. Aliquam ut lacus mattis, 
+                        fermentum est eget, finibus eros. Donec vehicula dui quis tortor faucibus rutrum. Praesent nec vehicula nisi. Maecenas 
+                        consequat metus eros, ac consequat neque dignissim non. Praesent vitae metus nec nisl congue egestas nec vitae tortor. 
+                        Nulla facilisi.
                     </p>
                 </section>
             </article>

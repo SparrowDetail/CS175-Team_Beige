@@ -7,6 +7,8 @@ Description: General use article styles and classes
     --header-text-margin: 1em;
     --figure-border-color: black;
     --img-figure-max-width: 300px;
+    --anchor-color: rgb(88, 202, 7); /*pending color scheme*/
+    --anchor-color-visited: rgb(57, 131, 4); /*pending color scheme*/
 }
 
 * {
@@ -64,6 +66,29 @@ article {
             font-size: 2.1em;
             margin: 0 0 1rem 0;
         }
+
+        nav {
+            margin: 1em auto 0 auto;
+            padding: 10px;
+            border: 2px dotted rgba(0, 0, 0, 0.6);
+            font-size: 1.2em;
+
+            caption {
+                font-size: 1.1em;
+                font-weight: 700;
+            }
+
+            ul, ol {
+                margin: 10px 0 0 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            li {
+                color: var(--anchor-color-visited);
+            }
+        }
     }
 
     p {
@@ -73,7 +98,7 @@ article {
 
     a {
         text-decoration: none;
-        color: rgb(88, 202, 7); /*pending color scheme*/
+        color: var(--anchor-color);
     }
 
     a:hover {
@@ -81,7 +106,7 @@ article {
     }
 
     a:visited {
-        color: rgb(57, 131, 4); /*pending color scheme*/
+        color: var(--anchor-color-visited);
     }
 
     hr {
@@ -146,10 +171,9 @@ img {
     border: 1px solid black;
 }
 
-/*Style Classes*/
 .fig-top-bottom {
     gap: 0;
-
+    
     img:last-of-type {
         margin-bottom: 1rem;
     }
@@ -161,7 +185,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
+    
     img {
         grid-row: 1;
         grid-column: span 1;
@@ -172,6 +196,37 @@ img {
     figcaption {
         grid-row: 2;
         grid-column: 1/-1;
+    }
+}
+
+/*Table styles*/
+table {
+    --table-border: 1px solid black;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border-right: var(--table-border);
+    border-bottom: var(--table-border);
+    border-left: var(--table-border);
+
+    caption, thead {
+        font-weight: 700;
+    }
+
+    caption {
+        border-top: var(--table-border);
+        border-right: var(--table-border);
+        border-bottom: 2px dotted black;
+        border-left: var(--table-border);
+        font-size: 1.1em;
+        font-style: italic;
+    }
+
+    td, th, caption {
+        padding: 10px 1rem;
+    }
+    
+    td {
+        border: 1px solid black;
     }
 }
 
