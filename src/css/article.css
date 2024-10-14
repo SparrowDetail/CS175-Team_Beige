@@ -5,6 +5,7 @@ Description: General use article styles and classes
 **/
 :root {
   --header-text-margin: 1em;
+  --content-max-width: 760px;
   --figure-border-color: black;
   --img-figure-max-width: 300px;
   --anchor-color: rgb(88, 202, 7); /*pending color scheme*/
@@ -23,8 +24,36 @@ body {
 main, footer {
   width: 95%;
   height: fit-content;
-  max-width: 760px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
+}
+
+/*Header*/
+body > header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+  background-color: #4A4A4A;
+  color: white;
+  --link-color: white;
+  --link-color-hover: white;
+}
+body > header nav {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+}
+body > header a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+body > header a:hover {
+  color: var(--link-color-hover);
+  opacity: 0.7;
 }
 
 /*Article typographical and structural styles*/
@@ -33,6 +62,7 @@ article {
   width: 100%;
   padding-top: 1rem;
   font-size: 1.2rem;
+  overflow-y: scroll;
 }
 article :is(h1, h2, h3, h4, h5, h6) {
   text-align: center;
@@ -67,6 +97,7 @@ article header nav {
   padding: 10px;
   border: 2px dotted rgba(0, 0, 0, 0.6);
   font-size: 1.2em;
+  max-width: 400px;
 }
 article header nav caption {
   font-size: 1.1em;
@@ -210,6 +241,16 @@ table td {
 
 /*Desktop Styles*/
 @media only screen and (min-width: 600px) {
+  /*Header*/
+  body > header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem max(1rem, (100% - var(--content-max-width)) / 2);
+  }
+  body > header nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
   /*Article Section typographical and structural styles*/
   article section {
     display: block;
