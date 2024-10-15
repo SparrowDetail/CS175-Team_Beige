@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        ". footer .";
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3% 1fr 3%;
+    grid-template-areas: 
+                    ". recent ."
+                    ". aside1 ."
+                    ". console .";
+    justify-content: center;
+    align-items: center;
+}
+
+main > aside#aside-1 {
+    grid-area: aside1;
+    height: 100%;
+}
+
+main > #recent-articles {
+    grid-area: recent;
+}
+
+main > #console-nav {
+    grid-area: console;
+}
+
+nav#console-nav {
+    width: 100%;
+    text-align: center;
+}
+
+nav#console-nav > ul {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+}
+
+nav#console-nav a {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-decoration: none;
+}
+
+nav#console-nav img {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 70%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 820px) {
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 15% 1fr 15%;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+                    "aside1 recent ."
+                    "aside2 console ."
+                    "aside3 . .";
+        justify-content: center;
+        align-items: start;
+    }
+
+    nav#console-nav > ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav#console-nav img {
+        width: 100%;
+    }
+}

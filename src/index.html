@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Retro Game Console Info</title>
-        
+        <link rel="stylesheet" href="./css/home.css">
     </head>
     <body>
         <header>
@@ -12,16 +12,16 @@
             <img src="logo.png" alt="Retro Game Logo">
             <h1>Retro Game Console Info</h1>
         </header>
-
+        
         <main>
             <!-- Left Sidebar for Ads or Images -->
-            <aside>
+            <aside id="aside-1">
                 <h2>Ad Space</h2>
                 <p>This space can be used for advertisements or retro game pictures.</p>
             </aside>
 
             <!-- Main Content for Recent Articles -->
-            <section>
+            <section id="recent-articles">
                 <h2>Recent Articles</h2>
                 <article>
                     <h3>Article Title 1</h3>
@@ -35,18 +35,51 @@
             </section>
 
             <!-- Right Sidebar for Navigation -->
-            <aside>
-                <nav>
-                    <h2>Console Pages</h2>
-                    <ul>
-                        <li><a href="#">Nintendo DS Consoles</a></li>
-                        <li><a href="#">Nintendo Gameboy</a></li>
-                        <li><a href="#">Nintendo Gameboy Advanced </a></li>
-                        <li><a href="#">Super Nintendo Content​</a></li>
-                        <!-- Add more links as needed -->
-                    </ul>
-                </nav>
-            </aside>
+            <nav id="console-nav">
+                <h2>Console Pages</h2>
+                <ul>
+                    <li><a href="#">
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nintendo-DS-Fat-Blue.jpg/220px-Nintendo-DS-Fat-Blue.jpg"
+                                alt="Nintendo DS"
+                                aria-label="Nintendo Duel Screen (DS) Console"
+                                loading="lazy">
+                            Nintendo DS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Game-Boy-FL.jpg/220px-Game-Boy-FL.jpg" 
+                                alt="Nintendo Gameboy"
+                                aria-label="Nintendo Gameboy Console"
+                                loading="lazy">
+                            Nintendo Gameboy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg/300px-Nintendo-Game-Boy-Advance-Purple-FL.jpg"
+                                alt="Nintendo Gameboy Advanced"
+                                aria-label="Nintendo Gameboy Advanced"
+                                loading="lazy">
+                            Nintendo Gameboy Advanced 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg"
+                                alt="Super Nintendo"
+                                aria-label="Super Nintendo Entertainment System"
+                                loading="lazy">
+                            Super Nintendo Content
+                        </a>
+                    </li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </nav>
         </main>
 
         <footer>
