@@ -163,6 +163,15 @@ article section {
     }
 }
 
+/*Default figure and img styles*/
+figure, section > img {
+    margin: 1em auto;
+}
+
+section > img {
+    display: flex;
+}
+
 /*Figure styles*/
 figure {
     width: fit-content;
@@ -180,7 +189,7 @@ figure {
         text-align: center;
     }
 
-    img {
+    img, video {
         border: none;
     }
 }
@@ -230,6 +239,16 @@ img {
     figcaption {
         grid-row: 2;
         grid-column: 1/-1;
+    }
+}
+
+.fig-video {
+    max-width: none;
+    width: 90%;
+
+    video {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -293,15 +312,6 @@ table {
     /*Article Section typographical and structural styles*/
     article section {
         display: block;
-    }
-
-    /*Default figure and img styles*/
-    figure, section > img {
-        margin: 1em auto;
-    }
-
-    section > img {
-        display: flex;
     }
 
     /*Style classes*/
