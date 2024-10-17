@@ -1,5 +1,6 @@
+<!--
 Author: Steve
-Date: 9/30/2024
+Date: 10/17/2024
 Title: Super Nintendo Hardware Overview
 Sources:
     https://www.copetti.org/writings/consoles/super-nintendo/
@@ -10,10 +11,16 @@ Sources:
     https://en.wikipedia.org/wiki/Fourth_generation_of_video_game_consoles
     https://videogameperfection.com/forums/topic/43-87-aspect-ratio-correction-for-snes/
     https://wiki.superfamicom.org/dma-and-hdma
+    https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation
+-->
 
 <article>
-    <h1>What makes a Super Nintendo?</h1>
-    <section>
+    <header>
+        <h1>What makes a Super Nintendo?</h1>
+        <span id="author">Steven Short</span>
+        <span id="date">10/17/2024</span>
+    </header>
+    <section id="background">
         <h2>Background</h2>
         <figure>
             <img 
@@ -30,7 +37,7 @@ Sources:
             with over 49 million consoles sold!
         </p>
     </section>
-    <section>
+    <section id="cpu">
         <h2>The CPU</h2>
         <figure>
             <img
@@ -64,6 +71,12 @@ Sources:
         </p>
         <table>
             <caption>Ricoh 5A22 Overview</caption>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
                     <td>Variable Clock Speed</td>
@@ -88,7 +101,7 @@ Sources:
             </tbody>
         </table>
     </section>
-    <section>
+    <section id="graphics">
         <h2>Behind the Picture</h2>
         <figure>
             <img 
@@ -124,12 +137,35 @@ Sources:
             period to complete before rendering new graphics. This allowed developers to change S-PPU settings mid-frame for very unique game design opportunities. Anyway, backing up a bit,
             the DMA is a chip that allows the CPU (or peripherals) to read data directly from memory without requiring the CPU to execute a series of read/write operations. This made rendering
             graphics faster, but, due to a shared address bus in the SNES, CPU processes were paused when DMA was in use. HDMA was similar in function, but, rather than transferring an entire memory
-            block at once, only a few bytes would be transferred during the <a href="https://en.wikipedia.org/wiki/Horizontal_blanking_interval" aria-label="H-Blank Breakdown">H-Blank</a> period.
+            block at once, only a few bytes would be transferred during the <a href="https://en.wikipedia.org/wiki/Horizontal_blanking_interval" aria-label="H-Blank Breakdown" target="_blank">H-Blank</a> period.
             This permitted the S-PPU to modify render data during a frame without distorting the image. HDMA would always take priority over DMA transfers and any conflicting DMA data would be
             terminated immediately.
         </p>
     </section>
-    <section>
+    <section id="audio">
         <h2>Wait. What's that sound!</h2>
+        <p>
+            The Super Nintendo did not hold-out when it came to its audio enhancements. Nintendo partnered with Sony to acquire a sophisticated audio synthesizer composed of a DSP (Digital Signal Processor)
+            that sequenced and mixed samples and a CPU dedicated to driving the DSP. The DSP (referred to as an S-DSP) played 
+            <a href="https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation" aria-label="ADPCM sample breakdown" target="_blank">
+                ADPCM audio samples
+            </a> 
+            with up to a 16-bit resolution across eight channels. The driving CPU was a SPC700 (or S-SMP) that acted as an independent 8-bit CPU that could receive commands from the primary CPU to communicate
+            with the DSP for audio output. Audio files were stored in 64 KB of pseudostatic RAM (PSRAM) available to the primary CPU and accessed by the S-SMP for processing. The following soundbite from 
+            <a href="https://www.copetti.org/writings/consoles/super-nintendo/" aria-label="Copetti article link" target="_blank">Copetti</a>
+            demonstrates how game designers were able to layer audio to provide an immersive audio experience.
+        </p>
+        <figure class="fig-video">
+            <video 
+                autoplay="false" 
+                aria-label="Mother 2/Earthbound Soundbite" 
+                src="https://www.copetti.org/videos/consoles/snes/snowman_snes.660210ab0ac12d8efe730fd8d1b970df384b68441f5e313c410d8d374ef52669.mp4" 
+                type="video/mp4"
+                controls
+                controls-list="nodownload nofullscreen">
+                No video available
+            </video>
+            <figcaption>Mother 2/Earthbound (1994) from Copetti</figcaption>
+        </figure>
     </section>
 </article>
