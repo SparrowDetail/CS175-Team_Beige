@@ -5,8 +5,11 @@ Description: General use article styles and classes
 **/
 :root {
     --header-text-margin: 1em;
+    --content-max-width: 760px;
     --figure-border-color: black;
     --img-figure-max-width: 300px;
+    --anchor-color: rgb(88, 202, 7); /*pending color scheme*/
+    --anchor-color-visited: rgb(57, 131, 4); /*pending color scheme*/
 }
 
 * {
@@ -21,8 +24,39 @@ body {
 main, footer {
     width: 95%;
     height: fit-content;
-    max-width: 760px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
+}
+
+/*Header*/
+body > header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 10px;
+    background-color: #4A4A4A;
+    color: white;
+    --link-color: white;
+    --link-color-hover: white;
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        gap: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+    }
+
+    a:hover {
+        color: var(--link-color-hover);
+        opacity: 0.7;
+    }
 }
 
 /*Article typographical and structural styles*/
@@ -31,6 +65,7 @@ article {
     width: 100%;
     padding-top: 1rem;
     font-size: 1.2rem;
+    overflow-y: scroll;
 
     :is(h1, h2, h3, h4, h5, h6) {
         text-align: center;
@@ -64,6 +99,30 @@ article {
             font-size: 2.1em;
             margin: 0 0 1rem 0;
         }
+
+        nav {
+            margin: 1em auto 0 auto;
+            padding: 10px;
+            border: 2px dotted rgba(0, 0, 0, 0.6);
+            font-size: 1.2em;
+            max-width: 400px;
+
+            caption {
+                font-size: 1.1em;
+                font-weight: 700;
+            }
+
+            ul, ol {
+                margin: 10px 0 0 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            li {
+                color: var(--anchor-color-visited);
+            }
+        }
     }
 
     p {
@@ -73,7 +132,7 @@ article {
 
     a {
         text-decoration: none;
-        color: rgb(88, 202, 7); /*pending color scheme*/
+        color: var(--anchor-color);
     }
 
     a:hover {
@@ -81,7 +140,7 @@ article {
     }
 
     a:visited {
-        color: rgb(57, 131, 4); /*pending color scheme*/
+        color: var(--anchor-color-visited);
     }
 
     hr {
@@ -104,6 +163,15 @@ article section {
     }
 }
 
+/*Default figure and img styles*/
+figure, section > img {
+    margin: 1em auto;
+}
+
+section > img {
+    display: flex;
+}
+
 /*Figure styles*/
 figure {
     width: fit-content;
@@ -121,7 +189,7 @@ figure {
         text-align: center;
     }
 
-    img {
+    img, video {
         border: none;
     }
 }
@@ -146,10 +214,9 @@ img {
     border: 1px solid black;
 }
 
-/*Style Classes*/
 .fig-top-bottom {
     gap: 0;
-
+    
     img:last-of-type {
         margin-bottom: 1rem;
     }
@@ -161,7 +228,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
+    
     img {
         grid-row: 1;
         grid-column: span 1;
@@ -172,6 +239,47 @@ img {
     figcaption {
         grid-row: 2;
         grid-column: 1/-1;
+    }
+}
+
+.fig-video {
+    max-width: none;
+    width: 90%;
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*Table styles*/
+table {
+    --table-border: 1px solid black;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border-right: var(--table-border);
+    border-bottom: var(--table-border);
+    border-left: var(--table-border);
+
+    caption, thead {
+        font-weight: 700;
+    }
+
+    caption {
+        border-top: var(--table-border);
+        border-right: var(--table-border);
+        border-bottom: 2px dotted black;
+        border-left: var(--table-border);
+        font-size: 1.1em;
+        font-style: italic;
+    }
+
+    td, th, caption {
+        padding: 10px 1rem;
+    }
+    
+    td {
+        border: 1px solid black;
     }
 }
 
@@ -189,18 +297,21 @@ img {
 
 /*Desktop Styles*/
 @media only screen and (min-width: 600px) {
+    /*Header*/
+    body > header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem max(1rem, calc((100% - var(--content-max-width)) / 2));
+
+        nav {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
     /*Article Section typographical and structural styles*/
     article section {
         display: block;
-    }
-
-    /*Default figure and img styles*/
-    figure, section > img {
-        margin: 1em auto;
-    }
-
-    section > img {
-        display: flex;
     }
 
     /*Style classes*/
