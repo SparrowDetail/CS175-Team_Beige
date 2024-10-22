@@ -1,0 +1,65 @@
+/*
+Author: Steven Short
+Date: 10/20/2024
+Description: Login page styles
+*/
+@import "./boiler.scss";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+/*Form styles*/
+form {
+    width: 100%;
+    height: fit-content;
+    max-width: 370px;
+    min-width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+    font-size: 1.6rem;
+
+    .form-heading, :is(h1, h2, h3, h4, h5, h6) {
+        align-self: center;
+    }
+
+    label {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        white-space: nowrap;
+
+        input {
+            flex: 1 1 100%;
+            font-size: 0.8em;
+            padding: 0 1em;
+            border: 2px solid #000000ab;
+            border-radius: 6px;
+            box-shadow: #000000d1 0px 0px 8px -4px;
+        }
+    }
+
+    .submission-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        input {
+            font-size: 0.8em;
+            width: 35%;
+        }
+    }
+}
+
+/*Control classes*/
+.invalid {
+    border: 2px solid red;
+    box-shadow: red 0px 0px 8px -4px;
+}

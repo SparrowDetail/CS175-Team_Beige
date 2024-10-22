@@ -1,8 +1,8 @@
-/**
+/*
 Author: Steven Short
 Date: 10/6/2024
 Description: General use article styles and classes
-**/
+*/
 :root {
     --header-text-margin: 1em;
     --content-max-width: 760px;
@@ -12,14 +12,7 @@ Description: General use article styles and classes
     --anchor-color-visited: rgb(57, 131, 4); /*pending color scheme*/
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
+@import "./boiler.scss";
 
 main, footer {
     width: 95%;

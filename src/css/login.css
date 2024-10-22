@@ -1,0 +1,74 @@
+/*
+Author: Steven Short
+Date: 10/20/2024
+Description: Login page styles
+*/
+/**
+Author: Steven Short
+Date: 10/20/2024
+Description: Boilerplate css code used across website
+**/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/*Form styles*/
+form {
+  width: 100%;
+  height: fit-content;
+  max-width: 370px;
+  min-width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+}
+form .form-heading, form :is(h1, h2, h3, h4, h5, h6) {
+  align-self: center;
+}
+form label {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  white-space: nowrap;
+}
+form label input {
+  flex: 1 1 100%;
+  font-size: 0.8em;
+  padding: 0 1em;
+  border: 2px solid rgba(0, 0, 0, 0.6705882353);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.8196078431) 0px 0px 8px -4px;
+}
+form .submission-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+form .submission-buttons input {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+/*Control classes*/
+.invalid {
+  border: 2px solid red;
+  box-shadow: red 0px 0px 8px -4px;
+}
+
+/*# sourceMappingURL=login.css.map */
