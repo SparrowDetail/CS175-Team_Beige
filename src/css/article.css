@@ -1,8 +1,9 @@
-/**
+/*
 Author: Steven Short
 Date: 10/6/2024
 Description: General use article styles and classes
-**/
+*/
+@import url("../css/color_palette.css");
 :root {
   --header-text-margin: 1em;
   --content-max-width: 760px;
@@ -12,6 +13,11 @@ Description: General use article styles and classes
   --anchor-color-visited: rgb(57, 131, 4); /*pending color scheme*/
 }
 
+/**
+Author: Steven Short
+Date: 10/20/2024
+Description: Boilerplate css code used across website
+**/
 * {
   box-sizing: border-box;
 }
@@ -19,6 +25,16 @@ Description: General use article styles and classes
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text-primary);
+}
+
+figure, img {
+  background-color: var(--tertiary);
+  color: var(--text-tertiary);
 }
 
 main, footer {
@@ -36,10 +52,17 @@ body > header {
   flex-direction: column;
   place-items: center;
   gap: 10px;
-  background-color: #4A4A4A;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--text-secondary);
   --link-color: white;
   --link-color-hover: white;
+}
+body > header img#logo {
+  height: 80px;
+  width: fit-content;
+  aspect-ratio: 20/13;
+  background-color: transparent;
+  border: none;
 }
 body > header nav {
   display: flex;
@@ -50,6 +73,7 @@ body > header nav {
 body > header a {
   text-decoration: none;
   color: var(--link-color);
+  font-size: 1.5rem;
 }
 body > header a:hover {
   color: var(--link-color-hover);
