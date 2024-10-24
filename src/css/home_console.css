@@ -1,0 +1,42 @@
+/*
+Author: Steven Short
+Date: 10/24/2024
+Description: Home page console link style
+*/
+nav#console-nav {
+    width: 100%;
+    text-align: center;
+}
+
+nav#console-nav > ul {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+}
+
+nav#console-nav a {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-decoration: none;
+}
+
+nav#console-nav img {
+    width: 70%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    filter: drop-shadow(#0000008a 3px 3px 4px);
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 820px) {
+    nav#console-nav > ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav#console-nav img {
+        width: 100%;
+    }
+}

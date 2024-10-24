@@ -1,3 +1,5 @@
+@import url("./home_console.css");
+
 * {
     box-sizing: border-box;
 }
@@ -52,34 +54,6 @@ main > #console-nav {
     grid-area: console;
 }
 
-nav#console-nav {
-    width: 100%;
-    text-align: center;
-}
-
-nav#console-nav > ul {
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
-}
-
-nav#console-nav a {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    text-decoration: none;
-}
-
-nav#console-nav img {
-    border-radius: 50%;
-    border: 1px solid black;
-    width: 70%;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-}
-
 footer {
     grid-area: footer;
     text-align: center;
@@ -98,13 +72,5 @@ footer {
                     "aside3 . .";
         justify-content: center;
         align-items: start;
-    }
-
-    nav#console-nav > ul {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    nav#console-nav img {
-        width: 100%;
     }
 }
