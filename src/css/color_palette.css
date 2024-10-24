@@ -1,0 +1,12 @@
+/*
+    Color palette proposal
+*/
+:root {
+    --primary: #ede8d0;
+    --secondary: #C94418;
+    --tertiary: #f2f1eb;
+
+    --text-primary: #7C1818;
+    --text-secondary: #FFFFFF;
+    --text-tertiary: #3E3838;
+}
