@@ -3,6 +3,7 @@ Author: Steven Short
 Date: 10/20/2024
 Description: Login page styles
 */
+@import url("../css/color_palette.css");
 /**
 Author: Steven Short
 Date: 10/20/2024
@@ -21,6 +22,32 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+}
+
+/*Applied color palette styles*/
+body {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  font-family: var(--font-one);
+}
+
+input, button {
+  background-color: var(--tertiary);
+  color: var(--text-tertiary);
+  border: 2px solid var(--text-primary);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.8196078431) 0px 0px 8px -4px;
+}
+
+.submission-buttons input:hover {
+  background-color: var(--primary), rgba(0, 0, 0, 0.089);
+}
+
+dialog {
+  border-radius: 10px;
+  border: 3px solid var(--text-primary);
+  background-color: var(--tertiary);
+  color: var(--text-tertiary);
 }
 
 /*Form styles*/
@@ -50,9 +77,6 @@ form label input {
   flex: 1 1 100%;
   font-size: 0.8em;
   padding: 0 1em;
-  border: 2px solid rgba(0, 0, 0, 0.6705882353);
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.8196078431) 0px 0px 8px -4px;
 }
 form .submission-buttons {
   width: 100%;
@@ -63,6 +87,22 @@ form .submission-buttons {
 form .submission-buttons input {
   font-size: 0.8em;
   width: 35%;
+}
+
+/*Dialog layout and styles*/
+dialog {
+  width: fit-content;
+  height: fit-content;
+  font-size: 1em;
+  text-align: center;
+}
+dialog form {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+dialog button {
+  font-size: 1.2em;
 }
 
 /*Control classes*/

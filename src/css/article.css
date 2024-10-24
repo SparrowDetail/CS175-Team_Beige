@@ -9,8 +9,6 @@ Description: General use article styles and classes
   --content-max-width: 760px;
   --figure-border-color: black;
   --img-figure-max-width: 300px;
-  --anchor-color: rgb(88, 202, 7); /*pending color scheme*/
-  --anchor-color-visited: rgb(57, 131, 4); /*pending color scheme*/
 }
 
 /**
@@ -27,9 +25,11 @@ body {
   padding: 0;
 }
 
+/*Applied color palette*/
 body {
   background-color: var(--primary);
   color: var(--text-primary);
+  font-family: var(--font-one);
 }
 
 figure, img {
@@ -37,6 +37,35 @@ figure, img {
   color: var(--text-tertiary);
 }
 
+body > header {
+  background-color: var(--secondary);
+  color: var(--text-secondary);
+}
+
+article > header li {
+  color: var(--primary-anchor-color);
+}
+
+a {
+  color: var(--primary-anchor-color);
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+body > header {
+  background-color: var(--secondary);
+  color: var(--text-secondary);
+}
+body > header a {
+  color: var(--secondary-anchor-color);
+}
+body > header a:hover {
+  opacity: 0.7;
+}
+
+/*General section styles*/
 main, footer {
   width: 95%;
   height: fit-content;
@@ -52,10 +81,6 @@ body > header {
   flex-direction: column;
   place-items: center;
   gap: 10px;
-  background-color: var(--secondary);
-  color: var(--text-secondary);
-  --link-color: white;
-  --link-color-hover: white;
 }
 body > header img#logo {
   height: 80px;
@@ -72,12 +97,7 @@ body > header nav {
 }
 body > header a {
   text-decoration: none;
-  color: var(--link-color);
   font-size: 1.5rem;
-}
-body > header a:hover {
-  color: var(--link-color-hover);
-  opacity: 0.7;
 }
 
 /*Article typographical and structural styles*/
@@ -133,22 +153,9 @@ article header nav ul, article header nav ol {
   flex-direction: column;
   gap: 10px;
 }
-article header nav li {
-  color: var(--anchor-color-visited);
-}
 article p {
   vertical-align: baseline;
   line-height: 1.5em;
-}
-article a {
-  text-decoration: none;
-  color: var(--anchor-color);
-}
-article a:hover {
-  opacity: 0.7;
-}
-article a:visited {
-  color: var(--anchor-color-visited);
 }
 article hr {
   margin: 1em 0;
