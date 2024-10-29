@@ -1,15 +1,15 @@
 const headerHTML = `
     <img
         id="logo" 
-        src="../assets/logo.svg" 
+        src="../../assets/logo.svg" 
         alt="logo"
         loading="eager"
         aria-label="Game Review Logo">
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Console</a>
+        <a href="../../index.html">Home</a>
+        <a onclick="history.back()">Console</a>
         <a href="#">About</a>
-        <a href="#">Login</a>
+        <a href="../../login.html">Admin</a>
     </nav>
 `;
 
