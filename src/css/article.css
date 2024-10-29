@@ -8,7 +8,7 @@ Description: General use article styles and classes
   --header-text-margin: 1em;
   --content-max-width: 760px;
   --figure-border-color: black;
-  --img-figure-max-width: 300px;
+  --img-figure-max-width: 400px;
 }
 
 /**
@@ -154,6 +154,9 @@ figure {
 figure figcaption {
   font-style: italic;
   text-align: center;
+}
+figure img {
+  width: 100%;
 }
 figure img, figure video {
   border: none;
