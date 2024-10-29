@@ -6,9 +6,26 @@ Description: Login page styles
 @import url("../css/color_palette.css");
 @import "./boiler.scss";
 
+:root {
+    --content-max-width: 860px;
+}
+
 body {
     width: 100vw;
     height: 100vh;
+    display: flex;
+}
+
+body > header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
     display: flex;
 }
 
@@ -18,6 +35,7 @@ body {
     color: var(--text-primary);
     font-family: var(--font-one);
 }
+
 
 input, button {
     background-color: var(--tertiary);
@@ -108,3 +126,17 @@ dialog {
     border: 2px solid red;
     box-shadow: red 0px 0px 8px -4px;
 }
+
+@import "./header-template.scss";
+
+/*Header override*/
+body > header {
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: end;
+}
+
+body > header a {
+    color: var(--text-primary);
+}
+

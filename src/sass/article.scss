@@ -52,7 +52,6 @@ article {
     width: 100%;
     padding-top: 1rem;
     font-size: 1.2rem;
-    overflow-y: scroll;
 
     :is(h1, h2, h3, h4, h5, h6) {
         text-align: center;
@@ -284,7 +283,7 @@ table {
 
 /*Animations - requires article.js*/
 @media (prefers-reduced-motion: no-preference) {
-    *[fade-in] {
+    *[fade-in], section > img, section > figure {
         opacity: 0;
     }
 
@@ -306,7 +305,7 @@ table {
 
 /*Print view styles - i.e. format for printing*/
 @media print {
-    *[fade-in] {
+    *[fade-in], section > img, section > figure  {
         opacity: 1;
     }
 }

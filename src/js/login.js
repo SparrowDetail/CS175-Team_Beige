@@ -1,6 +1,6 @@
 /**
 Author: Steven Short @SparrowDetail
-Date: 10/20/2024
+Date: 10/28/2024
 Description: Login page styles
 **/
 const invalidClassName = "invalid";
@@ -25,8 +25,8 @@ window.onload = () => {
 
 /**Loads the administrator login form for submission */
 const loadLogin = () => {
-    const bodyContent = document.body;
-    bodyContent.innerHTML = loginHTML;
+    const mainContent = document.querySelector("main");
+    mainContent.innerHTML = loginHTML;
 
     const form = document.getElementById("login-form");
 
@@ -36,7 +36,8 @@ const loadLogin = () => {
         console.log(validateLoginForm());
 
         if (validateLoginForm()) {
-            form.submit();
+            window.sessionStorage.setItem("admin", "login");
+            history.back();
         }
     });
 };
@@ -45,8 +46,8 @@ const loadLogin = () => {
  * Provides core functionality and input validation.
 */
 const loadRegistration = () => {
-    const bodyContent = document.body;
-    bodyContent.innerHTML = registerHTML;
+    const mainContent = document.querySelector("main");
+    mainContent.innerHTML = registerHTML;
 
     const form = document.getElementById("register-form");
 
@@ -129,21 +130,10 @@ const usernameValidation = (username) => {
     return !username.match(regex);
 };
 
-/**Dialog box HTML used for input validation */
-const dialogBoxHTML = `
-    <dialog id="improper-input-dialog">
-        <form method="dialog">
-            <strong>Invalid input</strong>
-            <span id="invalid-input-dialog-text"></span>
-            <button id="close-dialog-button">Close</button>
-        </form>
-    </dialog>
-`;
-
-/**Syncs to DialogBoxHTML to display a passed error message.
+/**Syncs to Dialog Box used for input validation to display a passed error message.
  * 
  * @param {string} string - string to display as the dialog message.
- * @requires dialogBoxHTML must appear in document
+ * @requires dialog must appear in document
  */
 const inputErrorMsg = (string) => {
     const dialogBox = document.getElementById("improper-input-dialog");
@@ -161,7 +151,7 @@ const inputErrorMsg = (string) => {
 
 /**Login page HTML */
 const loginHTML = `
-    <form id="login-form" action="login.php" method="post">
+    <form id="login-form" action="" method="post">
         <strong class="form-heading">Administrator Login</strong>
         <label for="username">
             Username: 
@@ -175,8 +165,7 @@ const loginHTML = `
             <input type="submit" value="Login">
             <input type="button" value="Register" onclick="loadRegistration()">
         </div>
-    </form>
-` + dialogBoxHTML;
+    </form>`;
 
 /**Registration page HTML */
 const registerHTML = `
@@ -206,5 +195,4 @@ const registerHTML = `
             <input type="submit" value="Register">
             <input type="button" value="Cancel" onclick="loadLogin()">
         </div>
-    </form>
-` + dialogBoxHTML;
+    </form>`;

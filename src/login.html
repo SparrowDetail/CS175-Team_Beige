@@ -1,7 +1,7 @@
 <!--
 Author: Steven Short @SparrowDetail
-Date: 10/20/2024
-
+Date: 10/28/2024
+Description: Administrator login and registration page
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,20 @@ Date: 10/20/2024
         <script src="./js/login.js"></script>
     </head>
     <body>
-        
+        <header>
+            <nav>
+                <a onclick="history.back()">Back</a>
+            </nav>
+        </header>
+        <main>
+
+        </main>
+        <dialog id="improper-input-dialog">
+            <form method="dialog">
+                <strong>Invalid input</strong>
+                <span id="invalid-input-dialog-text"></span>
+                <button id="close-dialog-button">Close</button>
+            </form>
+        </dialog>
     </body>
 </html>
