@@ -28,7 +28,7 @@ const renderHeader = () => {
         <nav>
             <a href="../../index.html">Home</a>
             <a onclick="history.back()">Console</a>
-            <a href="#">About</a>
+            <a href="#">Contact</a>
             <a ${adminSession ? `onclick="logout()"` : `href="../../login.html"`}>
                 ${adminSession ? "Logout" : "Admin"}
             </a>
