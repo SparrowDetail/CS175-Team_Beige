@@ -40,8 +40,10 @@ main, footer {
 
 /*Article typographical and structural styles*/
 article {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: fit-content;
   padding-top: 1rem;
   font-size: 1.2rem;
 }
@@ -56,11 +58,18 @@ article h1 {
 }
 
 article header {
-  margin: 1em 0;
+  margin: 0 0 1rem 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
+}
+article > header img {
+  height: 300px;
+  filter: drop-shadow(#0000008a 3px 3px 4px);
+}
+article > header img#gameboy {
+  margin-top: 10px;
 }
 article header #author, article header #date {
   margin: 0 0 0 1rem;
@@ -76,7 +85,7 @@ article header #date::before {
 }
 article header h1 {
   font-size: 2.1em;
-  margin: 0 0 1rem 0;
+  margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 article header nav {
@@ -117,11 +126,15 @@ article hr {
 }
 /*Overall Article Style*/
 article section {
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   place-items: left;
   font-size: 16px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+article section:last-of-type {
+  margin-bottom: 0;
 }
 article section p {
   margin: 0 0 1em 0;
