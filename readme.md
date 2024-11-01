@@ -10,6 +10,8 @@ Team Beige will create a small wiki-like website for retro game consoles featuri
 
 ### Overview
 
+![SDLC Diagram](./readme/SDLC.png)
+
 Employed a Waterfall-like approach transitioning between five phases: planning, analysis, development, testing, and deployment. We cycled between the development and testing phases as necessary to debug any errors and ensure the final product satisfied our final objective.
 
 ### Phase 1: Planning
