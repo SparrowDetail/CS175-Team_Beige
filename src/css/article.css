@@ -7,7 +7,7 @@ Description: General use article styles and classes
 :root {
   --header-text-margin: 1em;
   --content-max-width: 760px;
-  --figure-border-color: black;
+  --figure-border-color: var(--text-primary);
   --img-figure-max-width: 400px;
 }
 
