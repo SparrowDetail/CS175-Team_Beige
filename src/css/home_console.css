@@ -8,6 +8,10 @@ nav#console-nav {
     text-align: center;
 }
 
+nav#console-nav h2 {
+    font-size: 2rem;
+}
+
 nav#console-nav > ul {
     padding: 0;
     list-style: none;
@@ -21,6 +25,13 @@ nav#console-nav a {
     flex-direction: column;
     place-items: center;
     text-decoration: none;
+    color: var(--primary-anchor-color);
+    font-size: 1.2em;
+}
+
+nav#console-nav a:hover {
+    position: relative;
+    top: -1rem;
 }
 
 nav#console-nav img {
