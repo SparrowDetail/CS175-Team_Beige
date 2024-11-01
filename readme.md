@@ -8,9 +8,9 @@ Team Beige will create a small wiki-like website for retro game consoles featuri
 
 ## Software Development Life Cycle
 
-### Overview
+<img alt="SDLC Diagram" src="./readme/SDLC.png" width="500" height="auto">
 
-![SDLC Diagram](./readme/SDLC.png)
+### Overview
 
 Employed a Waterfall-like approach transitioning between five phases: planning, analysis, development, testing, and deployment. We cycled between the development and testing phases as necessary to debug any errors and ensure the final product satisfied our final objective.
 
