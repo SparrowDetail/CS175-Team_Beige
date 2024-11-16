@@ -125,33 +125,35 @@ article a:hover {
 article hr {
   margin: 1em 0;
 }
+article h2 {
+  margin: 0;
+}
 /*Overall Article Style*/
 article section {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  place-items: left;
-  font-size: 16px;
+  gap: 10px;
+  place-items: start;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 article section:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 100px;
 }
 article section p {
-  margin: 0 0 1em 0;
-}
-article section p:last-of-type {
   margin: 0;
 }
 
+/*Date class*/
+.date {
+  font-style: italic;
+}
+.date::before {
+  content: "Last edited ";
+}
 
   /*Desktop Styles*/
-@media only screen and (min-width: 600px) {      
-    /*Article Section typographical and structural styles*/
-    article section {
-        display: block;
-    }
-    
+@media only screen and (min-width: 600px) {         
     /*Style classes*/
     /*Defaults centered on mobile*/
     .float-right {

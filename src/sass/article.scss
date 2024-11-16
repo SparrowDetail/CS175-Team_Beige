@@ -84,6 +84,7 @@ article {
         h1 {
             font-size: 2.1em;
             margin: 0 0 1rem 0;
+            text-align: start;
         }
 
         nav {
@@ -114,6 +115,7 @@ article {
 
     hr {
         margin: 1em 0;
+        border: 2px solid var(--text-primary);
     }
 }
 
@@ -292,16 +294,16 @@ table {
     }
 
     .fade-in-animation {
-        animation: 700ms fade-in linear forwards 1;
+        animation: 500ms fade-in linear forwards 1;
     }
 
     @keyframes fade-in {
         from {
-            transform: translateY(15%);
+            transform: translateX(-5%) translateY(5%);
             opacity: 0;
         }
         to {
-            transform: translateY(0);
+            transform: translateX(0) translateY(0);
             opacity: 1;
         }
     }
