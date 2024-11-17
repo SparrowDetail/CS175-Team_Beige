@@ -50,14 +50,32 @@ main {
     grid-template-areas: 
                     ". recent ."
                     ". aside1 ."
-                    ". console .";
+                    ". console ."
+                    ". aside2 .";
     justify-content: center;
     align-items: center;
 }
 
+main > aside img {
+    width: 100%;
+    border: 1px solid var(--text-primary);
+    border-radius: 15px;
+}
+
 main > aside#aside-1 {
     grid-area: aside1;
-    height: 100%;
+    width: 95%;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+}
+
+main > aside#aside-1 img {
+    max-width: 260px;
+}
+
+main > aside#aside-2 {
+    grid-area: aside2;
 }
 
 main > #recent-articles {
@@ -81,8 +99,8 @@ footer {
         grid-template-columns: 15% 1fr 15%;
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
-                    "aside1 recent ."
-                    "aside2 console ."
+                    "aside1 recent aside2"
+                    ". console ."
                     "aside3 . .";
         justify-content: center;
         align-items: start;
