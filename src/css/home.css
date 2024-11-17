@@ -98,6 +98,7 @@ header {
     place-items: center;
     padding: 1rem;
     font-size: 1.5em;
+    box-shadow: #4a4a4a5d 0px 2px 10px 5px;
 }
 
 header img#logo {
@@ -130,7 +131,7 @@ header nav>a:hover {
 /*Recent article gallery*/
 #recent-articles h2 {
     font-size: 2rem;
-    margin: 10px 0 0 0;
+    margin: 1rem 0 0 0;
 }
 
 .article-gallery {
