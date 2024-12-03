@@ -38,6 +38,7 @@ body > header nav {
   flex-direction: column;
   place-items: center;
   gap: 10px;
+  word-spacing: -2px;
 }
 body > header a {
   text-decoration: none;

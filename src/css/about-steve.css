@@ -133,16 +133,19 @@ body > header {
 body > header img#logo {
   height: 80px;
   width: fit-content;
+  background-color: transparent;
+  border: none;
 }
 body > header nav {
   display: flex;
   flex-direction: column;
   place-items: center;
   gap: 10px;
+  word-spacing: -2px;
 }
 body > header a {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 /*Header desktop style*/
