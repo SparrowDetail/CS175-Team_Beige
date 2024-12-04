@@ -27,11 +27,11 @@ const renderHeader = () => {
             aria-label="Game Review Logo">
         <nav>
             <a href="../../index.html">Home</a>
-            <a onclick="history.back()">Console</a>
             <a href="#">Contact</a>
             <a ${adminSession ? `onclick="logout()"` : `href="../../login.html"`}>
-                ${adminSession ? "Logout" : "Admin"}
+            ${adminSession ? "Logout" : "Admin"}
             </a>
+            <a onclick="history.back()">Back</a>
         </nav>
     `;
 
