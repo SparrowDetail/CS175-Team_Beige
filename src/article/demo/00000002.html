@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="keywords" content="demo, demonstration, samples">
+        <title>Article Demo</title>
+        <link rel="stylesheet" href="../../css/article.css">
+        <script src="../../js/article.js"></script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h1>Demonstration of Article Styles</h1>
+                    <span id="author">Steven Short</span>
+                    <span id="date">10/7/2024</span>
+                    <nav>
+                        <caption>Table of contents:</caption>
+                        <ol>
+                            <li><a href="#in-text-links">In Text Links</a></li>
+                            <li><a href="#image-demo">Images</a></li>
+                            <li><a href="#figure-demo">Figures</a></li>
+                            <li><a href="#fade-in-animations">Fade-in Animation</a></li>
+                            <li><a href="#table-demo">Table</a></li>
+                        </ol>
+                    </nav>
+                </header>
+                <section id="in-text-links">
+                    <h2>In text links</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus tellus eget euismod cursus. 
+                        Donec et feugiat ipsum. Nullam vitae ex eu libero vehicula blandit eu vel tellus. Vivamus pulvinar 
+                        imperdiet ornare. 
+                        <a href="https://www.lipsum.com/" aria-label="Lorem Ipsum" target="_blank">Duis aliquam</a> 
+                        luctus libero et congue. Morbi aliquam porta molestie. Vestibulum ante 
+                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse risus odio, efficitur 
+                        non accumsan a, tempus feugiat purus. Vivamus eget rutrum lectus. Etiam gravida sit amet purus quis lacinia. 
+                        Sed mollis lobortis ipsum non facilisis. Curabitur aliquet semper elementum. Phasellus eget vestibulum
+                        erat, sed iaculis mi. Maecenas quis aliquet magna. Aliquam ac purus vitae erat accumsan pellentesque. 
+                        In in lacinia sem.
+                    </p>
+                </section>
+                <hr>
+                <section id="image-demo">
+                    <h2>Image Default</h2>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                        alt="NES"
+                        loading="lazy"
+                        aria-label="NES System/Famicom"
+                    >
+                    <p>
+                        Nulla pulvinar quis ipsum eget scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin 
+                        rutrum, nulla id ultricies ultricies, augue lacus commodo enim, vel tristique sapien diam nec leo. Etiam 
+                        eget ligula blandit, feugiat enim bibendum, vulputate mi. Donec in porttitor nisl. Phasellus pretium ut 
+                        nibh nec rhoncus. Cras vel eleifend est. Morbi at interdum metus. Curabitur non molestie eros. Praesent 
+                        id dolor in turpis sollicitudin consequat in non lectus.
+                    </p>
+                    <h3>Image Float Right</h3>
+                    <img
+                        class="float-right"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                        alt="NES"
+                        loading="lazy"
+                        aria-label="NES System/Famicom"
+                    >
+                    <p>
+                        Pellentesque tincidunt ante eget aliquam viverra. Integer viverra rhoncus tortor, consectetur commodo 
+                        ipsum pulvinar eget. Phasellus ut sem quis nisl volutpat tincidunt eget id elit. Etiam quis tempus ante. 
+                        Nullam quis tellus a eros viverra ultricies. Duis pretium, ante ut viverra sagittis, tellus nunc dapibus 
+                        magna, vel tincidunt urna dui non lacus. Donec placerat sapien neque, vel vehicula orci hendrerit eu. Morbi 
+                        mollis nisi et mollis auctor. Ut in nibh sed mauris pretium convallis. Etiam nec pharetra lorem.
+                    </p>
+                </section>
+                <hr>
+                <section id="figure-demo">
+                    <h2>Figure Default and Figure Demo</h2>
+                    <figure>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                            alt="NES"
+                            loading="lazy"
+                            aria-label="NES System/Famicom"
+                        >
+                        <figcaption>Nintendo Entertainment System</figcaption>
+                    </figure>
+                    <p>
+                        Nulla pulvinar quis ipsum eget scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin 
+                        rutrum, nulla id ultricies ultricies, augue lacus commodo enim, vel tristique sapien diam nec leo. Etiam 
+                        eget ligula blandit, feugiat enim bibendum, vulputate mi. Donec in porttitor nisl. Phasellus pretium ut 
+                        nibh nec rhoncus. Cras vel eleifend est. Morbi at interdum metus. Curabitur non molestie eros. Praesent 
+                        id dolor in turpis sollicitudin consequat in non lectus.
+                    </p>
+                    <figure class="fig-video">
+                        <video 
+                            autoplay="false" 
+                            aria-label="Mother 2/Earthbound Soundbite" 
+                            src="https://www.copetti.org/videos/consoles/snes/snowman_snes.660210ab0ac12d8efe730fd8d1b970df384b68441f5e313c410d8d374ef52669.mp4" 
+                            type="video/mp4"
+                            controls
+                            controls-list="nodownload nofullscreen">
+                            No video available
+                        </video>
+                        <figcaption>Mother 2/Earthbound (1994) from Copetti</figcaption>
+                    </figure>
+                    <h3>Figure Float Right</h3>
+                    <figure class="float-right">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                            alt="NES"
+                            loading="lazy"
+                            aria-label="NES System/Famicom"
+                        >
+                        <figcaption>Nintendo Entertainment System</figcaption>
+                    </figure>
+                    <p>
+                        Pellentesque tincidunt ante eget aliquam viverra. Integer viverra rhoncus tortor, consectetur commodo 
+                        ipsum pulvinar eget. Phasellus ut sem quis nisl volutpat tincidunt eget id elit. Etiam quis tempus ante. 
+                        Nullam quis tellus a eros viverra ultricies. Duis pretium, ante ut viverra sagittis, tellus nunc dapibus 
+                        magna, vel tincidunt urna dui non lacus. Donec placerat sapien neque, vel vehicula orci hendrerit eu. Morbi 
+                        mollis nisi et mollis auctor. Ut in nibh sed mauris pretium convallis. Etiam nec pharetra lorem.
+                    </p>
+                    <h3>Figure top and bottom</h3>
+                    <figure class="fig-top-bottom float-right">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/XC68000.agr.jpg/250px-XC68000.agr.jpg"
+                            alt="Motorola 68000"
+                            aria-label="Motorola 68000 image"
+                            loading="lazy">
+                        <img
+                            src="https://www.copetti.org/images/consoles/snes/photos/s-cpu.282d88e4761530efe8344c49af67d947eb9d1ebea15f09cb210a0af5e0d47511.webp"
+                            alt="Ricoh 5A22"
+                            aria-label="Ricoh 5A22 used in Super Nintendo"
+                            loading="lazy">
+                        <figcaption>
+                            Motorola 68000 (top) and Super Nintendo Ricoh 5A22 (bottom)
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Sed lectus dolor, pellentesque non ultricies a, pharetra non justo. Curabitur condimentum semper 
+                        justo, accumsan imperdiet ante faucibus id. Praesent ultricies justo sem, sit amet pharetra enim 
+                        gravida et. Proin fringilla gravida lacus cursus vehicula. Proin quam mi, consequat sed blandit eget, 
+                        varius quis dolor. Ut in gravida mi, non varius quam. Ut varius imperdiet neque, vel ultrices turpis. 
+                        Phasellus eleifend augue id pulvinar egestas. Suspendisse laoreet mi in risus interdum porta. Class 
+                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer blandit 
+                        mi lacus, vitae pharetra augue finibus vitae. Mauris venenatis magna quam, in sagittis odio tristique 
+                        sagittis. Sed eu sapien sed risus porta eleifend id et sem. Proin justo dui, aliquet non convallis sed, 
+                        varius eu lectus.
+                    </p>
+                    <h3>Figure Left Right</h3>
+                    <figure class="fig-left-right">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg"
+                            alt="Super Nintendo"
+                            aria-label="Super Nintendo Entertainment System"
+                            loading="lazy"
+                        >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Nintendo-Super-Famicom-Set-FL.jpg/250px-Nintendo-Super-Famicom-Set-FL.jpg"
+                            alt="Super Famicom"
+                            aria-label="Nintendo Super Famicom"
+                            loading="lazy"
+                        >
+                        <figcaption>Super Nintendo (left) and Super Famicom (right)</figcaption>
+                    </figure>
+                    <p>
+                        Maecenas est nunc, laoreet a bibendum id, tempor quis mi. Curabitur aliquet egestas ex id vehicula. 
+                        Vestibulum eget semper ex, id dignissim purus. Sed scelerisque ultricies venenatis. Aenean lobortis 
+                        turpis in sagittis lobortis. Ut ac arcu vel nulla mattis hendrerit. Proin at porta lectus. Pellentesque 
+                        placerat ante eu gravida vehicula. Integer a tempor lacus. Pellentesque sodales lectus ut tellus cursus, 
+                        ut elementum nibh aliquet.
+                    </p>
+                    <h3>Figure Model 2 Option (can make default)</h3>
+                    <figure class="fig-model-2">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                            alt="NES"
+                            loading="lazy"
+                            aria-label="NES System/Famicom"
+                        >
+                        <figcaption>Nintendo Entertainment System</figcaption>
+                    </figure>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue, massa sed placerat commodo, neque 
+                        erat lobortis diam, in sodales quam lectus nec mauris. Cras auctor elit velit, et dignissim urna finibus 
+                        in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris elit 
+                        risus, elementum ac lacus id, tristique aliquam mauris. Integer nec pharetra nibh. Nam sed ornare nulla. 
+                        Vivamus efficitur purus ac venenatis mollis. Fusce tempor massa in elit semper sodales. Quisque at nulla 
+                        nec urna iaculis accumsan nec in turpis. Nulla facilisi. Pellentesque non velit purus.
+                    </p>
+                </section>
+                <hr>
+                <section id="fade-in-animations">
+                    <h2>Image Fade-in Demo (Requires JavaScript)</h2>
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                        alt="NES"
+                        loading="lazy"
+                        aria-label="NES System/Famicom"
+                        fade-in
+                    >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum gravida lacus sit amet auctor. 
+                        Vestibulum eu venenatis ante, sit amet eleifend magna. Quisque ornare diam pharetra nibh rhoncus efficitur. 
+                        Nullam tempus viverra magna, eu elementum turpis mattis vitae. Mauris ornare, mi vitae condimentum iaculis, 
+                        nisl justo pulvinar dui, eu mollis lectus purus vel mi. Donec lobortis placerat ante quis imperdiet. Nullam 
+                        consectetur dolor vitae feugiat dignissim. Cras porta vulputate tellus in dictum. Etiam eget lorem vitae nisl 
+                        iaculis iaculis.
+                    </p>
+                    <h3>Figure Fade-in (float right)</h3>
+                    <figure class="float-right" fade-in>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+                            alt="NES"
+                            loading="lazy"
+                            aria-label="NES System/Famicom"
+                        >
+                        <figcaption>Nintendo Entertainment System</figcaption>
+                    </figure>
+                    <p>
+                        Nulla semper sem id dui volutpat scelerisque. In tincidunt sem in arcu sodales lacinia. Proin at vulputate orci. 
+                        Vestibulum eget leo placerat, pellentesque nisi a, gravida nunc. Nulla ultricies bibendum turpis, cursus aliquam 
+                        quam congue nec. Pellentesque ante nulla, aliquam a purus ut, molestie faucibus mauris. Morbi vel pellentesque 
+                        tortor. Curabitur ultrices vehicula ipsum sit amet porta. Fusce porttitor vehicula molestie. Suspendisse eget 
+                        purus quis eros malesuada rhoncus nec eu diam. Sed tincidunt iaculis mi, a accumsan augue iaculis at. Nullam est 
+                        libero, auctor a iaculis vel, iaculis nec metus.
+                    </p>
+                </section>
+                <hr>
+                <section id="table-demo">
+                    <h2>Table demo</h2>
+                    <table>
+                        <caption>Ricoh 5A22 Overview</caption>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Variable Clock Speed</td>
+                                <td>1.79MHz-3.58MHz</td>
+                            </tr>
+                            <tr>
+                                <td>Instruction Set</td>
+                                <td>65816 ISA</td>
+                            </tr>
+                            <tr>
+                                <td>Data Bus</td>
+                                <td>8-bit</td>
+                            </tr>
+                            <tr>
+                                <td>Address Bus</td>
+                                <td>24-bit</td>
+                            </tr>
+                            <tr>
+                                <td>General Purpose Registers</td>
+                                <td>three 16-bit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Phasellus pretium turpis volutpat massa aliquet, nec commodo nunc maximus. Phasellus nibh massa, vestibulum vitae 
+                        est sed, varius euismod nibh. Praesent viverra nisi mi, vitae rutrum ante dapibus ultrices. Duis pulvinar mi vel 
+                        consectetur pretium. Duis dapibus ultrices risus, ac tristique dolor. Integer justo ante, imperdiet non est ac, 
+                        ultricies pretium nisi. Nam tellus augue, sagittis eu purus sed, hendrerit condimentum elit. Aliquam ut lacus mattis, 
+                        fermentum est eget, finibus eros. Donec vehicula dui quis tortor faucibus rutrum. Praesent nec vehicula nisi. Maecenas 
+                        consequat metus eros, ac consequat neque dignissim non. Praesent vitae metus nec nisl congue egestas nec vitae tortor. 
+                        Nulla facilisi.
+                    </p>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <ol class="sources">
+                <h4>References:</h4>
+                <li>
+                    <a href="https://www.lipsum.com/">
+                        https://www.lipsum.com/
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.lipsum.com/">
+                        https://www.lipsum.com/
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.lipsum.com/">
+                        https://www.lipsum.com/
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.lipsum.com/">
+                        https://www.lipsum.com/
+                    </a>
+                </li>
+            </ol>
+        </footer>
+    </body>
+</html>

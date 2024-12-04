@@ -1,0 +1,226 @@
+/**
+Author: Rian Spangler
+Date: 10/31/2024
+Description: Overall Style Changes
+**/
+
+/*Applied color palette*/
+@import url("../css/color_palette.css");
+body {
+  font-family: var(--font-one);
+  background-color: var(--primary);
+  color: var(--text-primary);
+}
+
+body > main a {
+  color: var(--primary-anchor-color);
+}
+
+
+/*Core page content*/
+:root {
+  --header-text-margin: 1em;
+  --content-max-width: 800px;
+  --img-figure-max-width: 300px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main, footer {
+  width: 95%;
+  height: fit-content;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/*Article typographical and structural styles*/
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+article :is(h2, h3, h4, h5, h6) {
+  text-align: start;
+  margin: 0 0 var(--header-text-margin) 0;
+  padding: 0;
+}
+
+article h1 {
+  text-align: center;
+}
+
+article header {
+  margin: 0 0 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+article > header img {
+  height: 300px;
+  filter: drop-shadow(#0000008a 3px 3px 4px);
+}
+article > header img#gameboy {
+  margin-top: 10px;
+}
+article header #author, article header #date {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4em;
+}
+article header #author::before {
+  content: "Contributed By: ";
+}
+article header #date::before {
+  content: "Last edited ";
+}
+article header h1 {
+  font-size: 2.1em;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+article header nav {
+  margin: 1em auto 0 auto;
+  padding: 10px;
+  border: 2px dotted rgba(0, 0, 0, 0.6);
+  font-size: 1.2em;
+  max-width: 400px;
+}
+article header nav caption {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+article header nav ul, article header nav ol {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+article header nav li {
+  color: var(--anchor-color-visited);
+}
+article p {
+  vertical-align: baseline;
+  line-height: 1.5em;
+  float: left;
+}
+article a {
+  text-decoration: none;
+  float: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article a:hover {
+  opacity: 0.7;
+}
+article hr {
+  margin: 1em 0;
+}
+article h2 {
+  margin: 0;
+}
+/*Overall Article Style*/
+article section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  place-items: start;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+article section:last-of-type {
+  margin-bottom: 100px;
+}
+article section p {
+  margin: 0;
+}
+
+/*Date class*/
+.date {
+  font-style: italic;
+}
+.date::before {
+  content: "Last edited ";
+}
+
+  /*Desktop Styles*/
+@media only screen and (min-width: 600px) {         
+    /*Style classes*/
+    /*Defaults centered on mobile*/
+    .float-right {
+        float: right;
+        margin: 0 1rem 1rem;
+    }
+    }
+      
+    /*# sourceMappingURL=article.css.map */
+
+/*
+Author: Steven Short
+Date: 10/20/2024
+Imported: header-template.scss
+Description: Standard header style template
+*/
+/*Applied color palette*/
+body > header {
+  background-color: var(--secondary);
+  color: var(--text-secondary);
+  box-shadow: rgba(74, 74, 74, 0.3647058824) 0px 2px 10px 5px;
+}
+body > header a {
+  color: var(--secondary-anchor-color);
+}
+body > header a:hover {
+  opacity: 0.7;
+}
+
+/*header formatted for mobile*/
+body > header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+}
+body > header img {
+  height: 80px;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+}
+body > header nav {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+}
+body > header a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/*Header desktop style*/
+@media only screen and (min-width: 700px) {
+  body > header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem max(1rem, (100% - var(--content-max-width)) / 2);
+  }
+  body > header nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=header-template.css.map */

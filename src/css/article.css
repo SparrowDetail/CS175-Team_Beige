@@ -1,0 +1,350 @@
+/*
+Author: Steven Short
+Date: 10/6/2024
+Description: General use article styles and classes
+*/
+@import url("../css/color_palette.css");
+:root {
+  --header-text-margin: 1em;
+  --content-max-width: 760px;
+  --figure-border-color: var(--text-primary);
+  --img-figure-max-width: 400px;
+}
+
+/**
+Author: Steven Short
+Date: 10/20/2024
+Description: Boilerplate css code used across website
+**/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Applied color palette*/
+body {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  font-family: var(--font-one);
+}
+
+figure, img {
+  background-color: var(--tertiary);
+  color: var(--text-tertiary);
+}
+
+article > header li {
+  color: var(--primary-anchor-color);
+}
+
+a {
+  color: var(--primary-anchor-color);
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/*General section styles*/
+main, footer {
+  width: 95%;
+  height: fit-content;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/*Article typographical and structural styles*/
+article {
+  display: block;
+  width: 100%;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+article :is(h1, h2, h3, h4, h5, h6) {
+  text-align: center;
+  margin: 0 0 var(--header-text-margin) 0;
+  padding: 0;
+}
+article header {
+  margin: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+article header #author, article header #date {
+  margin: 0 0 0 1rem;
+  padding: 0;
+  font-style: italic;
+  line-height: 1.4em;
+}
+article header #author::before {
+  content: "By: ";
+}
+article header #date::before {
+  content: "Last edited ";
+}
+article header h1 {
+  font-size: 2.1em;
+  margin: 0 0 1rem 0;
+  text-align: start;
+}
+article header nav {
+  margin: 1em auto 0 auto;
+  padding: 10px;
+  border: 2px dotted rgba(0, 0, 0, 0.6);
+  font-size: 1.2em;
+  max-width: 400px;
+}
+article header nav caption {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+article header nav ul, article header nav ol {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+article p {
+  vertical-align: baseline;
+  line-height: 1.5em;
+}
+article hr {
+  margin: 1em 0;
+  border: 2px solid var(--text-primary);
+}
+
+/*Article Section typographical and structural styles*/
+article section {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+article section p {
+  margin: 0 0 1em 0;
+}
+article section p:last-of-type {
+  margin: 0;
+}
+
+/*Default figure and img styles*/
+figure, section > img {
+  margin: 1em auto;
+}
+
+section > img {
+  display: flex;
+}
+
+/*Figure styles*/
+figure {
+  width: fit-content;
+  max-width: var(--img-figure-max-width);
+  height: fit-content;
+  padding: 1rem;
+  border: 5px double var(--figure-border-color);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 1rem;
+}
+figure figcaption {
+  font-style: italic;
+  text-align: center;
+}
+figure img {
+  width: 100%;
+}
+figure img, figure video {
+  border: none;
+}
+
+.fig-model-2 {
+  --box-shadow: #47474778; /*Pending color palette*/
+  border: none;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(255, 255, 255) 80%, rgba(83, 83, 83, 0.13) 90%);
+  box-shadow: 10px 5px 10px 0px var(--box-shadow), -2px -2px 10px 0px var(--box-shadow);
+}
+
+img {
+  width: 100%;
+  max-width: var(--img-figure-max-width);
+  border: 1px solid black;
+}
+
+.fig-top-bottom {
+  gap: 0;
+}
+.fig-top-bottom img:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.fig-left-right {
+  max-width: fit-content;
+  gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+.fig-left-right img {
+  grid-row: 1;
+  grid-column: span 1;
+  max-width: var(--img-figure-max-width);
+  min-width: 150px;
+}
+.fig-left-right figcaption {
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+
+.fig-video {
+  max-width: none;
+  width: 90%;
+}
+.fig-video video {
+  width: 100%;
+  height: auto;
+}
+
+/*Table styles*/
+table {
+  --table-border: 1px solid black;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  border-right: var(--table-border);
+  border-bottom: var(--table-border);
+  border-left: var(--table-border);
+}
+table caption, table thead {
+  font-weight: 700;
+}
+table caption {
+  border-top: var(--table-border);
+  border-right: var(--table-border);
+  border-bottom: 2px dotted black;
+  border-left: var(--table-border);
+  font-size: 1.1em;
+  font-style: italic;
+}
+table td, table th, table caption {
+  padding: 10px 1rem;
+}
+table td {
+  border: 1px solid black;
+}
+
+/*Footer styles and classes*/
+.sources {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.2em;
+}
+.sources :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 0 -30px;
+}
+
+/*Desktop Styles*/
+@media only screen and (min-width: 600px) {
+  /*Article Section typographical and structural styles*/
+  article section {
+    display: block;
+  }
+  /*Style classes*/
+  /*Defaults centered on mobile*/
+  .float-right {
+    float: right;
+    margin: 0 1rem 1rem;
+  }
+}
+/*Animations - requires article.js*/
+@media (prefers-reduced-motion: no-preference) {
+  *[fade-in], section > img, section > figure {
+    opacity: 0;
+  }
+  .fade-in-animation {
+    animation: 500ms fade-in linear forwards 1;
+  }
+  @keyframes fade-in {
+    from {
+      transform: translateX(-5%) translateY(5%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) translateY(0);
+      opacity: 1;
+    }
+  }
+}
+/*Print view styles - i.e. format for printing*/
+@media print {
+  *[fade-in], section > img, section > figure {
+    opacity: 1;
+  }
+}
+/*
+Author: Steven Short
+Date: 10/20/2024
+Imported: header-template.scss
+Description: Standard header style template
+*/
+/*Applied color palette*/
+body > header {
+  background-color: var(--secondary);
+  color: var(--text-secondary);
+  box-shadow: rgba(74, 74, 74, 0.3647058824) 0px 2px 10px 5px;
+}
+body > header a {
+  color: var(--secondary-anchor-color);
+}
+body > header a:hover {
+  opacity: 0.7;
+}
+
+/*header formatted for mobile*/
+body > header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+}
+body > header img#logo {
+  height: 80px;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+}
+body > header nav {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 10px;
+  word-spacing: -2px;
+}
+body > header a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/*Header desktop style*/
+@media only screen and (min-width: 700px) {
+  body > header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem max(1rem, (100% - var(--content-max-width)) / 2);
+  }
+  body > header nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=article.css.map */
