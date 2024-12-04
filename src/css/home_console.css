@@ -3,39 +3,47 @@ Author: Steven Short
 Date: 10/24/2024
 Description: Home page console link style
 */
-nav#console-nav {
+#console-nav {
     width: 100%;
     text-align: center;
 }
 
-nav#console-nav h2 {
+#console-nav h2 {
     font-size: 2rem;
 }
 
-nav#console-nav > ul {
+#console-nav > nav {
     padding: 0;
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);*/
+    gap: 2rem;
 }
 
-nav#console-nav a {
+#console-nav a {
     display: flex;
     flex-direction: column;
     place-items: center;
     text-decoration: none;
     color: var(--primary-anchor-color);
     font-size: 1.2em;
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
 }
 
-nav#console-nav a:hover {
+#console-nav a:hover {
     position: relative;
-    top: -1rem;
+    top: -10px;
 }
 
-nav#console-nav img {
-    width: 70%;
+#console-nav img {
+    width: 100%;
     aspect-ratio: 1/1;
     object-fit: contain;
     filter: drop-shadow(#0000008a 3px 3px 4px);
@@ -43,11 +51,5 @@ nav#console-nav img {
 
 /*Desktop styles*/
 @media only screen and (min-width: 820px) {
-    nav#console-nav > ul {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    nav#console-nav img {
-        width: 100%;
-    }
+    
 }
