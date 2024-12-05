@@ -38,6 +38,18 @@ header {
     padding: 1rem;
 }
 
+header nav {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: white
+}
+
 h1 {
     margin-bottom: 0.5em;
 }
