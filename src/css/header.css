@@ -12,6 +12,7 @@ body > header {
 }
 body > header a {
   color: var(--secondary-anchor-color);
+  cursor: pointer;
 }
 body > header a:hover {
   opacity: 0.7;
