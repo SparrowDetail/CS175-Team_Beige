@@ -1,0 +1,108 @@
+/* Color Palette and Fonts */
+:root {
+    --primary: #ede8d0;
+    --secondary: #C94418;
+    --tertiary: #f2f1eb;
+
+    --text-primary: #7C1818;
+    --text-secondary: #FFFFFF;
+    --text-tertiary: #3E3838;
+
+    --primary-anchor-color: #566F3E;
+    --secondary-anchor-color: white;
+
+    --header-bg: #C94418;
+    --figure-border-color: black;
+    --img-figure-max-width: 300px;
+
+    --font-one: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+}
+
+/* General Reset and Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-one);
+    background-color: var(--tertiary);
+    color: var(--text-primary);
+    text-align: center;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--text-secondary);
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+main {
+    margin: 2rem auto;
+    width: 95%;
+    max-width: 760px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Member Section and Figure Styles */
+.member {
+    width: 250px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+figure {
+    border: 5px double var(--figure-border-color);
+    padding: 1rem;
+    background: linear-gradient(135deg, white 80%, rgba(83, 83, 83, 0.13) 90%);
+    box-shadow: 10px 5px 10px rgba(71, 71, 71, 0.47);
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    max-width: var(--img-figure-max-width);
+    border-radius: 50%;
+    border: 1px solid var(--figure-border-color);
+}
+
+figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+    color: var(--text-tertiary);
+}
+
+.about-link {
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-anchor-color);
+    font-weight: bold;
+}
+
+.about-link:hover {
+    opacity: 0.7;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--header-bg);
+    color: var(--text-secondary);
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
