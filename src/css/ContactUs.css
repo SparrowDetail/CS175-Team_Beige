@@ -40,7 +40,8 @@ header nav {
 
 header a {
     text-decoration: none;
-    color: white
+    color: white;
+    cursor: pointer;
 }
 
 header a:hover {
