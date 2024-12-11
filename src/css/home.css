@@ -62,16 +62,19 @@ main > aside img {
     border-radius: 15px;
 }
 
-main > aside#aside-1 {
-    grid-area: aside1;
+main > aside#aside-1, main > aside#aside-2 {
     width: 95%;
     align-self: start;
     justify-self: center;
-    padding: 10px;
+    padding: 1rem 10px;
 }
 
-main > aside#aside-1 img {
+main > aside img {
     max-width: 260px;
+}
+
+main > aside#aside-1 {
+    grid-area: aside1;
 }
 
 main > aside#aside-2 {

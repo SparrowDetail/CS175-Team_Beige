@@ -27,7 +27,7 @@ const renderHeader = () => {
             aria-label="Game Review Logo">
         <nav>
             <a href="../../index.html">Home</a>
-            <a href="#">Contact</a>
+            <a href="../../ContactUs.html">Contact</a>
             <a ${adminSession ? `onclick="logout()"` : `href="../../login.html"`}>
             ${adminSession ? "Logout" : "Admin"}
             </a>

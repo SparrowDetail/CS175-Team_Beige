@@ -102,7 +102,7 @@ const validateRegistrationForm = () => {
     const username = document.getElementById("username");
     
     if (!simulatedValidUserIds.includes(userID.value)) {
-        inputErrorMsg("Invalid Employee ID");
+        inputErrorMsg("Employee ID not found");
         userID.classList.add(invalidClassName);
         return false;
     } else {
